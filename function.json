@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "myEventHubMessage",
+      "direction": "in",
+      "path": "insights-operational-logs",
+      "connection": "RootEventHubSAP"
+    },
+    {
+      "type": "serviceBus",
+      "name": "outputSbMsg",
+      "queueName": "hbotqueue",
+      "connection": "RootManageSharedAccessKey",
+      "accessRights_": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
